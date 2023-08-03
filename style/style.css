@@ -1,0 +1,290 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+}
+
+body {
+  font-family: "TTNorms";
+}
+
+@font-face {
+  font-family: "TTNorms";
+  src: url("../fonts/TTNorms-Regular.otf") format("openType");
+}
+@font-face {
+  font-family: "TTNorms Medium";
+  src: url("../fonts/TTNorms-Medium.otf") format("openType");
+}
+@font-face {
+  font-family: "TTNorms Light";
+  src: url("../fonts/TTNorms-Light.otf") format("openType");
+}
+@font-face {
+  font-family: "Times Roman Italic";
+  src: url("../fonts/Times-new-roman-italic.ttf") format("truetype");
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "TTNorms";
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.container .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.container .header-top .nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .header-top .nav .nav-logo {
+  margin-right: 2.5rem;
+}
+.container .header-top .nav .menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style-type: none;
+  gap: 1.5rem;
+}
+.container .header-top .nav .menu .menu-link {
+  color: #081D43;
+}
+.container .header-btn {
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+  background-color: #0050C8;
+}
+.container .header-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5rem 0;
+}
+.container .header-bottom .header-content-left {
+  width: 50%;
+}
+.container .header-bottom .header-content-left .header-content-wrapper {
+  max-width: 27rem;
+}
+.container .header-bottom .header-content-left .header-content-wrapper h1 {
+  font-family: "TTNorms Medium";
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 3rem;
+}
+.container .header-bottom .header-content-left .header-content-wrapper p {
+  color: #6C7890;
+  line-height: 1.8rem;
+}
+.container .header-bottom .header-content-left .header-content-wrapper .header-container-btns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.container .header-bottom .header-content-left .header-content-wrapper .header-container-btns .header-content-link {
+  display: block;
+  width: 10rem;
+  text-align: center;
+}
+.container .header-bottom .header-content-left .header-content-wrapper .header-container-btns > :nth-child(1) {
+  background-color: #87BC25;
+}
+.container .header-bottom .header-content-right {
+  width: 50%;
+}
+.container .header-bottom .header-content-right img {
+  width: 100%;
+}
+
+.works {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.works h5 {
+  color: #6C7890;
+  margin-bottom: 0.5rem;
+}
+.works h2 {
+  color: #081D43;
+  margin-bottom: 4rem;
+}
+.works .work-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.works .work-content .work-content-title {
+  color: #081D43;
+}
+.works .work-content .work-content-text {
+  max-width: 15rem;
+  color: #6C7890;
+}
+.works .work-content-img {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+.works .work-content-img img {
+  width: 100%;
+}
+
+.person-comments {
+  background-color: #0050C8;
+  color: #FFFFFF;
+  padding: 5rem 0 1rem 0;
+  text-align: center;
+}
+.person-comments h2 {
+  padding-bottom: 1rem;
+}
+.person-comments p {
+  max-width: 27rem;
+  margin: 0 auto;
+  line-height: 1.8rem;
+}
+.person-comments .comment-container {
+  max-width: 65rem;
+  margin: 3rem auto 1rem auto;
+}
+.person-comments .comment-container .comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 7rem;
+}
+.person-comments .comment-container .comments .comment {
+  background-color: #FFFFFF;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 20rem;
+  min-height: 16rem;
+}
+.person-comments .comment-container .comments .comment .comment-body {
+  color: #7E8085;
+  font-family: "Times Roman Italic";
+  text-align: left;
+  padding: 1rem;
+}
+.person-comments .comment-container .comments .comment .comment-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  color: #000000;
+  border-top: 3px solid #E8EBEF;
+  padding: 0.5rem 1rem;
+}
+.person-comments .comment-container .companies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.person-comments .comment-container .companies .company-img {
+  display: block;
+}
+
+.portfolio {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.portfolio h6 {
+  color: #6C7890;
+  padding-bottom: 1rem;
+}
+.portfolio h2 {
+  color: #081D43;
+  padding-bottom: 2rem;
+}
+.portfolio .portfolio-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.portfolio .portfolio-items .portfolio-item {
+  width: 25rem;
+}
+.portfolio .portfolio-items .portfolio-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.3rem;
+}
+
+.footer {
+  background-color: #0050C8;
+  padding: 7rem 0;
+}
+.footer .newsletter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .newsletter-wrapper h3 {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+}
+.footer .newsletter-wrapper .newsletter-email {
+  flex-basis: 22rem;
+  background-color: #FFFFFF;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .newsletter-wrapper .newsletter-email .newsletter-txt {
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  font-weight: normal;
+}
+.footer .newsletter-wrapper .newsletter-email .newsletter-btn {
+  background-color: #0050C8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+}/*# sourceMappingURL=style.css.map */

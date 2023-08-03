@@ -1,0 +1,221 @@
+.container {
+  @include container;
+  .header-top {
+    @include row($align-items: center, $justify-content: space-between);
+    padding: 1rem 0;
+
+    .nav {
+      @include row($align-items: center);
+
+      .nav-logo {
+        margin-right: 2.5rem;
+      }
+
+      .menu {
+        @include row;
+        list-style-type: none;
+        gap: 1.5rem;
+        .menu-link {
+          color: $color_link_header;
+        }
+      }
+    }
+  }
+
+  .header-btn {
+    @include button;
+  }
+
+  .header-bottom {
+    @include row($align-items: center);
+    margin: 5rem 0;
+
+    .header-content-left {
+      width: 50%;
+      .header-content-wrapper {
+        max-width: 27rem;
+        h1 {
+          font-family: "TTNorms Medium";
+          font-size: 2.4rem;
+          font-weight: normal;
+          line-height: 3rem;
+        }
+        p {
+          color: $text-color;
+          line-height: 1.8rem;
+        }
+        .header-container-btns {
+          @include row;
+          gap: 1.5rem;
+          margin-top: 2rem;
+
+          .header-content-link {
+            display: block;
+            width: 10rem;
+            text-align: center;
+          }
+          > :nth-child(1) {
+            background-color: $secendry_color;
+          }
+        }
+      }
+    }
+    .header-content-right {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.works {
+  text-align: center;
+  margin-bottom: 5rem;
+  h5 {
+    color: $text-color;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    color: $color_link_header;
+    margin-bottom: 4rem;
+    
+  }
+
+  .work-content {
+    @include row($justify-content: space-around, $align-items: center);
+    margin-bottom: 3rem;
+    .work-content-title {
+      color: $color_link_header;
+    }
+    .work-content-text {
+      max-width: 15rem;
+      color: $text-color;
+    }
+  }
+
+  .work-content-img {
+    max-width: 32rem;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.person-comments {
+  background-color: $primary_color;
+  color: $title_color;
+  padding: 5rem 0 1rem 0;
+  text-align: center;
+  h2 {
+    padding-bottom: 1rem;
+  }
+  p {
+    max-width: 27rem;
+    margin: 0 auto;
+    line-height: 1.8rem;
+  }
+
+  .comment-container {
+    max-width: 65rem;
+    margin: 3rem auto 1rem auto;
+
+    .comments {
+      @include row($justify-content: space-between);
+      gap: 1rem;
+      margin-bottom: 7rem;
+      .comment {
+        background-color: $title_color;
+        border-radius: 0.4rem;
+        @include row($justify-content: space-between);
+        flex-direction: column;
+        max-width: 20rem;
+        min-height: 16rem;
+
+        .comment-body {
+          color: $text_light_color;
+          font-family: "Times Roman Italic";
+          text-align: left;
+          padding: 1rem;
+        }
+        .comment-info {
+          @include row($align-items: center);
+          gap: 0.8rem;
+          color: $text_comment_color;
+          border-top: 3px solid $border_color;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+
+    .companies {
+      @include row($justify-content: space-between, $align-items: center);
+      .company-img {
+        display: block;
+      }
+    }
+  }
+}
+
+.portfolio {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  h6 {
+    color: $portfolio_color;
+    padding-bottom: 1rem;
+  }
+  h2 {
+    color: $portfolio_title_color;
+    padding-bottom: 2rem;
+  }
+  .portfolio-items {
+    @include row($justify-content: space-between);
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .portfolio-item {
+      width: 25rem;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.3rem;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $primary_color;
+  padding: 7rem 0;
+  .newsletter-wrapper {
+    @include row($justify-content: space-between, $align-items: center);
+    h3 {
+      color: $title_color;
+      font-size: 1.4rem;
+    }
+    .newsletter-email {
+      flex-basis: 22rem;
+     background-color: $title_color;
+     padding: 0.3rem;
+     border-radius: 0.3rem;
+     @include row($align-items: center, $justify-content: space-between);
+     .newsletter-txt {
+      border: none;
+      outline: none;
+      padding-left: 1rem;
+      font-weight: normal;
+      
+     }
+     .newsletter-btn {
+      background-color: $primary_color;
+      @include row($justify-content: center, $align-items: center);
+      padding: 0.7rem 1rem;
+      border-radius: 0.3rem;
+     }
+    }
+  }
+}

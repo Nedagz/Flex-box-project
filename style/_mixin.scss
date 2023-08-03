@@ -1,0 +1,19 @@
+@mixin container() {
+    max-width: 80rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+@mixin row($justify-content: flex-start, $align-items: flex-start ) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin button($background-color: $primary_color) {
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    background-color: $background-color;
+}
