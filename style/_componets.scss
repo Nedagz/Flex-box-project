@@ -20,6 +20,11 @@
         }
       }
     }
+    .header-icon {
+      font-size: 1.8rem;
+      display: none;
+      cursor: pointer;
+    }
   }
 
   .header-btn {
@@ -48,6 +53,7 @@
           @include row;
           gap: 1.5rem;
           margin-top: 2rem;
+          flex-wrap: wrap;
 
           .header-content-link {
             display: block;
@@ -67,6 +73,60 @@
       }
     }
   }
+
+  @media screen and (max-width: 960px) {
+    .header-btn {
+      display: none;
+    }
+    .header-icon {
+      display: block !important;
+    }
+    .menu {
+      position: fixed;
+      top: 0;
+      left: -16rem;
+      bottom: 0;
+      width: 16rem;
+      background-color: $primary_color;
+      flex-direction: column;
+      padding: 2rem 1rem;
+      transition: 0.4s all;
+      .menu-link {
+        color: $title_color !important;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .header-bottom {
+      flex-direction: column-reverse;
+      .header-content-left {
+        width: 100%;
+        margin: 2rem auto 0 auto;
+        .header-content-wrapper {
+          max-width: 100%;
+          h1 {
+            font-size: 2.2rem;
+          }
+          
+        }
+      }
+      .header-content-right {
+        width: 70%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .header-content-left {
+      .header-container-btns {
+      justify-content: center !important;
+    }
+    }
+    
+  }
 }
 
 .works {
@@ -79,18 +139,22 @@
   h2 {
     color: $color_link_header;
     margin-bottom: 4rem;
-    
   }
 
   .work-content {
     @include row($justify-content: space-around, $align-items: center);
     margin-bottom: 3rem;
-    .work-content-title {
-      color: $color_link_header;
-    }
-    .work-content-text {
-      max-width: 15rem;
-      color: $text-color;
+    flex-wrap: wrap;
+    .work-content-item {
+      margin-top: 1.5rem;
+      max-width: 16rem;
+      .work-content-title {
+        color: $color_link_header;
+      }
+      .work-content-text {
+        max-width: 15rem;
+        color: $text-color;
+      }
     }
   }
 
@@ -100,6 +164,9 @@
     img {
       width: 100%;
     }
+  }
+
+  @media screen and (max-width: 992px) {
   }
 }
 
@@ -125,6 +192,7 @@
       @include row($justify-content: space-between);
       gap: 1rem;
       margin-bottom: 7rem;
+      
       .comment {
         background-color: $title_color;
         border-radius: 0.4rem;
@@ -145,17 +213,29 @@
           color: $text_comment_color;
           border-top: 3px solid $border_color;
           padding: 0.5rem 1rem;
+          width: 100%;
         }
       }
+     
     }
 
     .companies {
-      @include row($justify-content: space-between, $align-items: center);
+      @include row($justify-content: center, $align-items: center);
+      flex-wrap: wrap;
+      gap: 1rem;
       .company-img {
         display: block;
       }
     }
   }
+  @media screen and (max-width: 992px) {
+    
+     .comments {
+      justify-content: center !important;
+      flex-wrap: wrap;
+      margin-bottom: 3rem !important;
+     }   
+  } 
 }
 
 .portfolio {
@@ -171,13 +251,13 @@
     padding-bottom: 2rem;
   }
   .portfolio-items {
-    @include row($justify-content: space-between);
+    @include row($justify-content: center);
     flex-wrap: wrap;
     gap: 1rem;
 
     .portfolio-item {
       width: 25rem;
-      
+
       img {
         width: 100%;
         height: 100%;
@@ -193,29 +273,36 @@
   padding: 7rem 0;
   .newsletter-wrapper {
     @include row($justify-content: space-between, $align-items: center);
+    flex-wrap: wrap;
     h3 {
       color: $title_color;
       font-size: 1.4rem;
+      text-align: center;
     }
     .newsletter-email {
       flex-basis: 22rem;
-     background-color: $title_color;
-     padding: 0.3rem;
-     border-radius: 0.3rem;
-     @include row($align-items: center, $justify-content: space-between);
-     .newsletter-txt {
-      border: none;
-      outline: none;
-      padding-left: 1rem;
-      font-weight: normal;
-      
-     }
-     .newsletter-btn {
-      background-color: $primary_color;
-      @include row($justify-content: center, $align-items: center);
-      padding: 0.7rem 1rem;
+      background-color: $title_color;
+      padding: 0.3rem;
       border-radius: 0.3rem;
-     }
+      @include row($align-items: center, $justify-content: space-between);
+      .newsletter-txt {
+        border: none;
+        outline: none;
+        padding-left: 1rem;
+        font-weight: normal;
+      }
+      .newsletter-btn {
+        background-color: $primary_color;
+        @include row($justify-content: center, $align-items: center);
+        padding: 0.7rem 1rem;
+        border-radius: 0.3rem;
+      }
+    }
+  }
+  @media screen and (max-width: 992px){
+    .newsletter-wrapper {
+      justify-content: center;
+      gap: 2rem;
     }
   }
 }
